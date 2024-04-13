@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_sheet_corner_radius">30sp</dimen>
+    <dimen name="bottom_sheet_offset_from_top">100sp</dimen>
+    <dimen name="tab_item_height">60sp</dimen>
+    <dimen name="tab_layout_height">86sp</dimen>
+</resources>

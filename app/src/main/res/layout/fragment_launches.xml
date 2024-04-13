@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/first_launch_card"
+                layout="@layout/card_launch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:drawable='@{@drawable/second}'
+                app:mainTitle='@{"Starlink 2"}'
+                app:subtitleFirst='@{"CCAES SLC 40"}'
+                app:subtitleSecond='@{"16-12-2014"}' />
+
+            <include
+                android:id="@+id/second_launch_card"
+                layout="@layout/card_launch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:drawable='@{@drawable/third}'
+                app:mainTitle='@{"DemoSat"}'
+                app:subtitleFirst='@{"AAAES SLC 40"}'
+                app:subtitleSecond='@{"06-07-2018"}' />
+
+            <include
+                android:id="@+id/third_launch_card"
+                layout="@layout/card_launch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:drawable='@{@drawable/fourth}'
+                app:mainTitle='@{"Falcon 9 Test"}'
+                app:subtitleFirst='@{"CCAES SEC 40"}'
+                app:subtitleSecond='@{"18-03-2019"}' />
+
+            <include
+                android:id="@+id/fourth_launch_card"
+                layout="@layout/card_launch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:drawable='@{@drawable/first}'
+                app:mainTitle='@{"CRS - 2"}'
+                app:subtitleFirst='@{"CAAES SLC 40"}'
+                app:subtitleSecond='@{"18-12-2019"}' />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="23sp"
+                android:layout_marginVertical="10sp"
+                android:orientation="vertical"
+                app:constraint_referenced_ids="first_launch_card,second_launch_card,third_launch_card,fourth_launch_card"
+                app:flow_horizontalAlign="center"
+                app:flow_verticalAlign="top"
+                app:flow_verticalGap="20sp"
+                app:flow_verticalStyle="packed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

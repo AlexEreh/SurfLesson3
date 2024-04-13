@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_upcoming"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/card"
+            layout="@layout/card_launch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:mainTitle='@{"Starlink 2"}'
+            app:subtitleFirst='@{"CCAES SLC 40"}'
+            app:subtitleSecond='@{"16-10-2016"}'
+            app:drawable='@{@drawable/first}'/>
+        <Space
+            android:id="@+id/first_space"
+            android:layout_width="0dp"
+            android:layout_height="42dp"/>
+        <TextView
+            android:id="@+id/launch_date_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26sp"
+            android:text="Launch date"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/card_launch_text" />
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23sp"
+            android:layout_marginTop="11sp"
+            android:text="Thu Oct 17 5:30:00 2019"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/upcoming_default_text" />
+        <Space
+            android:id="@+id/second_space"
+            android:layout_width="0dp"
+            android:layout_height="5dp"/>
+        <TextView
+            android:id="@+id/launch_site_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23sp"
+            android:layout_marginTop="16sp"
+            android:text="Launch site"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/card_launch_text" />
+
+        <TextView
+            android:id="@+id/site_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23sp"
+            android:layout_marginTop="11sp"
+            android:text="Cape Canaveral Air Force Station Space Launch Complex 40"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/upcoming_default_text" />
+        <Space
+            android:id="@+id/third_space"
+            android:layout_width="0dp"
+            android:layout_height="5dp"/>
+        <TextView
+            android:id="@+id/countdown_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23sp"
+            android:layout_marginTop="16sp"
+            android:text="Count down"
+            android:textAlignment="textStart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/card_launch_text" />
+
+        <TextView
+            android:id="@+id/down_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23sp"
+            android:layout_marginTop="11sp"
+            android:text="5 Hrs 30mins more..."
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textAppearance="@style/upcoming_default_text" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="23sp"
+            android:layout_marginVertical="10sp"
+            app:constraint_referenced_ids="card,first_space,launch_date_tv,date_tv,second_space,launch_site_tv,site_tv,third_space,countdown_tv,down_tv"
+            app:flow_horizontalAlign="center"
+            app:flow_verticalAlign="top"
+            app:flow_verticalGap="11sp"
+            app:flow_verticalStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
