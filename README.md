@@ -7,4 +7,4 @@
 
 ## Видео
 
-![Видео](docs/video.gif)
+<img src="/docs/video.gif" width="30%" alt="Видео"/>
