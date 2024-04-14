@@ -18,10 +18,10 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="6sp"
-        app:cardElevation="6sp"
-        app:layout_constraintHeight_min="128sp"
-        app:layout_constraintWidth_min="320sp">
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:layout_constraintHeight_min="128dp"
+        app:layout_constraintWidth_min="320dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:padding="12sp"
+                android:padding="12dp"
                 android:scaleType="fitCenter"
                 android:src="@{drawable}"
                 tools:src="@drawable/first"
@@ -47,36 +47,55 @@
                 android:id="@+id/rocket_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
                 android:text="Rocket"
+                android:textAlignment="textStart"
                 android:textAllCaps="true"
                 android:textAppearance="@style/card_launch_text"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintBottom_toTopOf="@+id/label_tv"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/flow2"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintHorizontal_bias="0"/>
 
             <TextView
                 android:id="@+id/label_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="start"
+                android:maxLines="2"
+                android:scrollHorizontally="false"
                 android:text="@{mainTitle}"
-                tools:text="Starlink 2"
                 android:textAllCaps="false"
+                app:layout_constrainedWidth="true"
                 android:textAppearance="@style/card_title_text"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="@id/flow2"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintHeight_default="spread"
+                app:layout_constraintHorizontal_bias="0"
+                tools:text="Starlink 2" />
 
             <TextView
                 android:id="@+id/active_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text='@{rocketActive ? "ACTIVE" : "INACTIVE"}'
-                tools:text="INACTIVE"
-                tools:background="@drawable/background_inactive"
-                android:textAllCaps="true"
+                android:layout_marginTop="9dp"
                 android:background="@{rocketActive ? @drawable/background_active : @drawable/background_inactive}"
-                android:paddingTop="3sp"
-                android:paddingBottom="4sp"
-                android:paddingStart="17sp"
-                android:paddingEnd="14sp"
-                android:textAppearance="@style/card_active_text" />
+                android:paddingStart="17dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="4dp"
+                android:text='@{rocketActive ? "ACTIVE" : "INACTIVE"}'
+                android:textAllCaps="true"
+                android:textAppearance="@style/card_active_text"
+                app:layout_constraintBottom_toBottomOf="@+id/flow2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/label_tv"
+                app:layout_constraintWidth_default="spread"
+                app:layout_constraintHorizontal_bias="0"
+                tools:background="@drawable/background_inactive"
+                tools:text="INACTIVE" />
             <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,17 +110,22 @@
 
             <androidx.constraintlayout.helper.widget.Flow
                 android:id="@+id/flow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                android:layout_marginTop="19sp"
-                android:layout_marginBottom="16sp"
                 app:constraint_referenced_ids="rocket_tv,label_tv,active_tv"
                 app:flow_horizontalAlign="start"
-                app:flow_verticalGap="9sp"
-                app:layout_constraintTop_toTopOf="parent"
+                app:flow_horizontalBias="0.0"
+                app:flow_horizontalStyle="spread"
+                app:flow_verticalGap="9dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="spread"
                 app:layout_constraintStart_toStartOf="@id/guideline"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_default="spread">
 
             </androidx.constraintlayout.helper.widget.Flow>
         </androidx.constraintlayout.widget.ConstraintLayout>

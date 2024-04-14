@@ -21,10 +21,10 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="6sp"
-        app:cardElevation="6sp"
-        app:layout_constraintHeight_min="128sp"
-        app:layout_constraintWidth_min="320sp">
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:layout_constraintHeight_min="128dp"
+        app:layout_constraintWidth_min="320dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
-                android:padding="12sp"
+                android:padding="12dp"
                 android:scaleType="fitCenter"
                 android:src="@{drawable}"
                 tools:src="@drawable/first"
@@ -53,7 +53,8 @@
                 android:text="Launch"
                 android:textAllCaps="true"
                 android:textAppearance="@style/card_launch_text"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                app:layout_constraintHorizontal_bias="0"/>
 
             <TextView
                 android:id="@+id/label_tv"
@@ -61,10 +62,14 @@
                 android:layout_height="wrap_content"
                 android:gravity="start"
                 android:text="@{mainTitle}"
+                android:maxLines="2"
+                app:layout_constrainedWidth="true"
                 tools:text="Starlink 2"
+                android:ellipsize="end"
                 android:textAllCaps="false"
                 android:textAppearance="@style/card_title_text"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                app:layout_constraintHorizontal_bias="0"/>
 
             <TextView
                 android:id="@+id/first_sublabel_tv"
@@ -73,7 +78,8 @@
                 android:text="@{subtitleFirst}"
                 tools:text="CCAES SLC 40"
                 android:textAllCaps="true"
-                android:textAppearance="@style/card_subtitle_text" />
+                android:textAppearance="@style/card_subtitle_text"
+                app:layout_constraintHorizontal_bias="0"/>
 
             <TextView
                 android:id="@+id/second_sublabel_tv"
@@ -82,7 +88,8 @@
                 android:text="@{subtitleSecond}"
                 tools:text="16-10-2016"
                 android:textAllCaps="true"
-                android:textAppearance="@style/card_subtitle_text" />
+                android:textAppearance="@style/card_subtitle_text"
+                app:layout_constraintHorizontal_bias="0"/>
             <androidx.constraintlayout.widget.Guideline
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,17 +104,21 @@
 
             <androidx.constraintlayout.helper.widget.Flow
                 android:id="@+id/flow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:orientation="vertical"
-                android:layout_marginTop="19sp"
-                android:layout_marginBottom="16sp"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="16dp"
                 app:constraint_referenced_ids="rocket_tv,label_tv,first_sublabel_tv,second_sublabel_tv"
                 app:flow_horizontalAlign="start"
-                app:flow_verticalGap="9sp"
+                app:flow_horizontalBias="0.0"
+                app:flow_horizontalStyle="spread"
+                app:flow_verticalGap="9dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="@id/guideline"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_default="spread">
 
             </androidx.constraintlayout.helper.widget.Flow>
         </androidx.constraintlayout.widget.ConstraintLayout>

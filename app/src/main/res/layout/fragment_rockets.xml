@@ -38,14 +38,14 @@
 
             <androidx.constraintlayout.helper.widget.Flow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="23sp"
-                android:layout_marginVertical="10sp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="23dp"
+                android:layout_marginVertical="10dp"
                 android:orientation="vertical"
                 app:constraint_referenced_ids="first_launch_card,second_launch_card,third_launch_card"
                 app:flow_horizontalAlign="center"
                 app:flow_verticalAlign="top"
-                app:flow_verticalGap="20sp"
+                app:flow_verticalGap="20dp"
                 app:flow_verticalStyle="packed"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
